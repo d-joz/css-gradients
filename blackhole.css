@@ -47,6 +47,22 @@
   aspect-ratio: 4/3;
   background-image: var(--black-hole-gradient);
 }
+#text {
+  height: 100%;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#text > h1 {
+  width: 3em;
+  font-family: oswald;
+  font-size: 30vh;
+  line-height: 1;
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+}
 #active {
   color: white;
   background-color: black;
