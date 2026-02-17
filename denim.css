@@ -1,0 +1,37 @@
+:root {
+  --denim: hsla(210, 60%, 60%);
+  --white: hsla(0, 0%, 90%);
+  --denim-pattern:
+    conic-gradient(
+      at 50% 65%,
+      transparent 0deg 180deg,
+      var(--denim) 180deg 270deg,
+      transparent 270deg 360deg
+    ),
+    conic-gradient(
+      at 50% 35%,
+      transparent 0deg 180deg,
+      var(--white) 180deg 270deg,
+      var(--denim) 270deg 360deg
+    ),
+    linear-gradient(
+      transparent 20%,
+      var(--denim) 20%,
+      var(--denim) 80%,
+      transparent 80%
+    );
+}
+.denim {
+  background-color: var(--white);
+  color: black;
+  background-image: var(--denim-pattern);
+  background-size: 5px 10px;
+}
+#active {
+  color: white;
+  background-color: hsl(200, 80%, 90%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4)), var(--denim-pattern);
+  background-size: 5px 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
