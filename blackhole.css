@@ -1,0 +1,59 @@
+:root {
+  --accent-colors:
+    linear-gradient(transparent 50%, hsla(0, 0%, 0%, 0.2)),
+    linear-gradient(135deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 0%, 0.2)),
+    radial-gradient(
+      ellipse 100% 50% at 60% 0,
+      rgba(155, 4, 4, 0.2),
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse 100% 50% at 100% 0,
+      rgba(32, 4, 155, 0.3),
+      transparent 80%
+    ),
+    radial-gradient(circle at 0 0, rgba(112, 4, 155, 0.15), transparent 50%);
+  --centeral-circle: radial-gradient(
+    circle at center,
+    black 20%,
+    hsl(45, 100%, 90%) 20%,
+    hsl(45, 100%, 90%) 36%,
+    transparent 40%
+  );
+  --orbit: radial-gradient(
+    ellipse 100% 50% at 50%,
+    transparent,
+    hsl(45, 100%, 90%) 20%,
+    hsl(45, 100%, 90%) 40%,
+    transparent 45%
+  );
+  --overlay-ring: radial-gradient(
+    ellipse 120% 120% at top,
+    transparent 58%,
+    black 60%,
+    transparent 62%
+  );
+  --light-warp:
+    radial-gradient(ellipse 23% 20% at 50% 43%, black 60%, transparent 70%),
+    radial-gradient(ellipse 30% 20% at 50% 48%, black 60%, transparent 70%);
+
+  --black-hole:
+    var(--light-warp), var(--overlay-ring), var(--orbit), var(--centeral-circle);
+  --black-hole-gradient: var(--accent-colors), var(--black-hole);
+}
+#blackhole {
+  background-color: black;
+  height: unset;
+  aspect-ratio: 4/3;
+  background-image: var(--black-hole-gradient);
+}
+#active {
+  color: white;
+  background-color: black;
+  background-size: 15em 10em;
+  background-position: 4em -2em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4)), var(--black-hole);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}

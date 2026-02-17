@@ -1,0 +1,46 @@
+:root {
+  --rainbow:
+    radial-gradient(
+      circle at top left,
+      hsla(45, 100%, 50%, 0.2),
+      transparent 60%
+    ),
+    radial-gradient(circle at top left, white 10%, transparent 30%),
+    /* clouds */ /*#1  */
+    radial-gradient(circle at 10% 30%, white 2%, transparent 10%),
+    radial-gradient(circle at 12% 35%, white 2%, transparent 10%),
+    radial-gradient(circle at 30% 35%, white 2%, transparent 10%),
+    radial-gradient(circle at 20% 30%, white 2%, transparent 10%),
+    /*#2  */ radial-gradient(circle at 70% 10%, white 2%, transparent 12%),
+    radial-gradient(circle at 82% 20%, white 2%, transparent 15%),
+    radial-gradient(circle at 60% 12%, white, transparent 8%),
+    radial-gradient(circle at 100% 10%, white 2%, transparent 10%),
+    /* rainbow */
+    radial-gradient(
+        ellipse 160% 190% at 110% 140%,
+        transparent 50%,
+        hsla(0, 100%, 50%, 0.2),
+        rgba(255, 166, 0, 0.2),
+        rgba(255, 255, 0, 0.2),
+        rgba(0, 128, 0, 0.2),
+        rgba(0, 0, 255, 0.2),
+        rgba(76, 0, 130, 0.2),
+        rgba(238, 130, 238, 0.2),
+        transparent 60%
+      );
+}
+.rainbow {
+  background-color: hsl(200, 80%, 90%);
+  color: black;
+  background-image: var(--rainbow);
+}
+
+#active {
+  color: white;
+  background-color: hsl(200, 80%, 90%);
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4)), var(--rainbow);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
