@@ -66,10 +66,10 @@
 #active {
   color: white;
   background-color: black;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   background-size: 15em 10em;
   background-position: 4em -2em;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4)), var(--black-hole);
-  font-weight: 500;
-  letter-spacing: 0.06em;
 }

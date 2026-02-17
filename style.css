@@ -56,8 +56,12 @@ nav li {
   text-decoration: none;
   padding: 0.6em;
   overflow: hidden;
+  transition: 300ms;
 }
 
 .gradient-btn:hover {
+  color: white;
+  background-color: hsla(0, 0%, 20%);
+  font-weight: 500;
   box-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.6);
 }
